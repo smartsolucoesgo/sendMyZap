@@ -175,7 +175,7 @@ require APP . 'view/admin/_templates/initFile.php';
                             <br>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <input type="text" name="webhook" id="webhook" class="form-control"  placeholder="Webhook de resposta dos dados">
+                                    <input type="text" name="webhook" id="webhook" class="form-control"  placeholder="Webhook de resposta dos dados" value="<?=URL_PUBLIC?>/webhook" disabled>
                                 </div>
                             </div>
 
@@ -236,7 +236,7 @@ require APP . 'view/admin/_templates/initFile.php';
                             <br>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <input type="text" id="editWebhook" class="form-control"  placeholder="Webhook de resposta dos dados">
+                                    <input type="text" id="editWebhook" class="form-control"  placeholder="Webhook de resposta dos dados" disabled>
                                 </div>
                             </div>
 
