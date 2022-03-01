@@ -1,0 +1,15 @@
+{
+    "type": "project",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {
+        "phpmailer/phpmailer": "~6.1"
+    },
+    "autoload":
+    {
+        "psr-4":
+        {
+            "SmartSolucoes\\" : "application/"
+        }
+    }
+}
