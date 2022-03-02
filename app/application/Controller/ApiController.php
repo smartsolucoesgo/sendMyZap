@@ -359,54 +359,5 @@ class ApiController
         }
     }
 
-    public function sendImage($param)
-    {
-        
-        $model = New Api();
-        // $conexao = $model->find('conexoes', $param['conexao']);
-        // $api = $model->find($this->table, $conexao['id_api']);
-
-        // $caminho = 'files/imagens/';
-        // $nome_imagem = $param['conexao'].'_'.time();
-        // $formato = 'jpg';
-        // Helper::upload($param['imagem'],$nome_imagem,$caminho);
-
-        var_dump($_POST);exit;
-
-        $telefone = str_replace(array(".", "/", "-", " ", "(", ")"), "", $param['telefone']);
-        $parametrosEnvia = array(
-            "session" => $conexao['nome'],
-            "number" => '55'.$telefone,
-            "text" => $param['mensagem'],
-            "path" => $param['imagem']
-        );
-
-        $data_stringEnvia = json_encode($parametrosEnvia);
-
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $api['protocol'].$api['url'].':'.$api['porta'].'/sendText');
-        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-        curl_setopt($ch, CURLOPT_BINARYTRANSFER, true);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-        curl_setopt($ch, CURLOPT_TIMEOUT, 20);
-        curl_setopt($ch, CURLOPT_MAXREDIRS, 3);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $data_stringEnvia);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-            'Content-Type: application/json',
-            'sessionkey: '.$conexao['sessionkey'],
-            'apitoken: '.$api['apitoken']
-        ));
-
-        $result = curl_exec($ch);
-        curl_close($ch);
-        $res = json_decode($result);
-
-        var_dump($res);
-    }
-
-    
 
 }

@@ -21,4 +21,19 @@ class Webhook extends Model
         return $query->fetch();
     }
 
+    public function allChatBot($pergunta)
+    {
+        $where = 'pergunta = "'. $pergunta .'"';
+        $sql = "
+          SELECT *
+          FROM chatbot
+          WHERE $where
+        ";
+        $query = $this->PDO()->prepare($sql);
+        $query->execute();
+        return $query->fetch();
+    }
+
+    
+
 }

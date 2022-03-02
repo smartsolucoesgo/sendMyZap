@@ -53,7 +53,7 @@ require APP . 'view/admin/_templates/initFile.php';
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="<?=URL_ADMIN?>">Dashboard</a></li>
+                    <li class="breadcrumb-item"><a href="">Dashboard</a></li>
                     <li class="breadcrumb-item active">Api</li>
                 </ol>
             </div>
@@ -299,12 +299,20 @@ $(function() {
         
 
         if(url == '') {
-            alert('vazio nao pode a url');
+            Swal.fire({
+                title: 'Ops!',
+                text: "Você precisa informar a URL do servidor!",
+                icon: 'error'
+            })
             return false
         }
 
         if(porta == '') {
-            alert('porta nao pode ser vazia')
+            Swal.fire({
+                title: 'Ops!',
+                text: "Você precisa informar a porta do servidor.",
+                icon: 'error'
+            })
             return false
         }
         

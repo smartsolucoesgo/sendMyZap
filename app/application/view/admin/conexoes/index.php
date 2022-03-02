@@ -57,7 +57,7 @@ require APP . 'view/admin/_templates/initFile.php';
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="<?=URL_ADMIN?>">Dashboard</a></li>
+                    <li class="breadcrumb-item"><a href="">Dashboard</a></li>
                     <li class="breadcrumb-item active">Conexões</li>
                 </ol>
             </div>
@@ -74,10 +74,8 @@ require APP . 'view/admin/_templates/initFile.php';
                     <div class="card-header">
                         <h3 class="card-title">Lista de Conexões</h3>
                         <div class="card-tools">
-                            <?php if($response['conexoes'] == null) { ?>
                             <button class="btn btn-outline-primary btn-sm" data-toggle="modal"
                                 data-target="#modal-conexao">Criar Conexão</button>
-                            <?php } ?>
                         </div>
                     </div>
 
@@ -309,9 +307,7 @@ $(document).ready(function(){
                             action: 'createAjax',
                             param: {
                                 nome: nome,
-                                id_api: id_api,
-                                mensagem_saudacao: mensagem_saudacao,
-                                mensagem_despedida: mensagem_despedida
+                                id_api: id_api
                             }
                         },
                         cache: false,

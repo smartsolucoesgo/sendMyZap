@@ -16,8 +16,8 @@ require APP . 'view/admin/_templates/initFile.php';
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="<?=URL_ADMIN?>">Dashboard</a></li>
-                    <li class="breadcrumb-item"><a href="<?=URL_ADMIN?>/usuario">Usuários</a></li>
+                    <li class="breadcrumb-item"><a href="">Dashboard</a></li>
+                    <li class="breadcrumb-item"><a href="">Usuários</a></li>
                     <li class="breadcrumb-item active">Meus Dados</li>
                 </ol>
             </div>

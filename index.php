@@ -32,7 +32,6 @@ $Route->post('forgot','AuthController@forgot');
 $Route->get('remember','AuthController@remember','session');
 $Route->post('newpassword','AuthController@newpassword');
 
-$Route->get('pusher', 'PusherController@index');
 $Route->post('webhook', 'WebhookController@index');
 
 // TODO: ############
@@ -59,6 +58,11 @@ $Route->group('admin', function ($Route) {
             $Route->get('imagem', 'MensagensController@imagem');
             $Route->post('imagem', 'MensagensController@enviaImg');
             $Route->crud('mensagens');
+        });
+
+        $Route->group('chatbot', function ($Route) {
+            $Route->get('consultaChat', 'ChatbotController@consultaChat');
+            $Route->crud('chatbot');
         });
 
         $Route->group('usuario', function ($Route) {

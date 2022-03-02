@@ -1,11 +1,12 @@
-    </div>
-        <footer class="main-footer">
-            <div class="float-right d-none d-sm-inline">
-            Versão 1.0
-            </div>
+</div>
+    
+    <footer class="main-footer">
+        <div class="float-right d-none d-sm-inline">
+        Versão 1.0
+        </div>
 
-            <strong>Copyright &copy; <?php echo date('Y');?> <b style="color:#000000;"><?=APP_TITLE?></b>.</strong>
-        </footer>
+        <strong>Copyright &copy; <?php echo date('Y');?> <b style="color:#000000;"><?=APP_TITLE?></b>.</strong>
+    </footer>
 </div>
 
 <script src="/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
